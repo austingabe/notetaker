@@ -1,9 +1,2 @@
 # Dependency directories
 node_modules/
-
-//count variable - auto increment as notes are added
-//id = 0 if no notes
-
-//only pieces of the object that you want will show - object.title, object.text - no object.id23
-
-//start by showing the test notes, then adding notes, then work on deleting the notes

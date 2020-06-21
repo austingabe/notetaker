@@ -1,19 +1,21 @@
-var path = require("path");
+// Dependency
+const path = require("path");
 
-module.exports = function(app) {
+// Export for connecting to server.js
+module.exports = function (app) {
 
   // Routes to home
-  app.get("/", function(req, res) {
+  app.get("/", (req, res) => {
     res.sendFile(path.join(__dirname, "../public/index.html"));
   });
 
   // Routes to notes page
-  app.get("/notes", function(req, res) {
+  app.get("/notes", (req, res) => {
     res.sendFile(path.join(__dirname, "../public/notes.html"));
   });
 
   // If no matching route is found default to home
-  app.get("*", function(req, res) {
+  app.get("*", (req, res) => {
     res.sendFile(path.join(__dirname, "../public/index.html"));
   });
 };

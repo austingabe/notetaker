@@ -1,7 +1,5 @@
-// Dependencies
+// Dependency
 const express = require("express");
-const path = require("path");
-const fs = require("fs");
 
 // Sets up Express app
 const app = express();
@@ -19,6 +17,7 @@ app.use(express.static(__dirname + "/public"));
 require("./routes/apiRoutes")(app);
 require("./routes/htmlRoutes")(app);
 
+// Listener starts the server
 app.listen(PORT, () => {
     console.log("App listening on PORT: " + PORT);
   });
